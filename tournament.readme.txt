@@ -1,0 +1,42 @@
+Vagrant-
+Run the virtual machine!
+
+Using the terminal, change directory to fullstack/vagrant (cd fullstack/vagrant), 
+then type "vagrant up" to launch your virtual machine.
+
+Once it is up and running, type "vagrant ssh" to log into it. 
+This will log your terminal in to the virtual machine, and you'll get a Linux shell prompt. 
+
+1. type cd /vagrant/tournament. this will get you to the tournament file folders containing the python and the SQL files.
+
+--------------------------------------------------------------------------------------------------------------------------	
+
+Your screen should look like this:
+vagrant@vagrant-ubuntu-trusty-32:/vagrant/tournament$ 
+psql (9.3.5)
+Type "help" for help.
+
+
+2. type "psql" to access the database
+3. type "\i tournament.sql" to import a new database
+4. you should see a series of ations leading to "you are now connected to database "tournament" with tables and views created
+5 Exit the Database "\q"-----------vagrant=> \q
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+6. run test by typing  "python tournament_test.py"
+
+vagrant@vagrant-ubuntu-trusty-32:/vagrant/tournament$ python tournament_test.py 
+
+Results.
+
+1. Old matches can be deleted.
+2. Player records can be deleted.
+3. After deleting, countPlayers() returns zero.
+4. After registering a player, countPlayers() returns 1.
+5. Players can be registered and deleted.
+6. Newly registered players appear in the standings with no matches.
+7. After a match, players have updated standings.
+8. After one match, players with one win are paired.
+Success!  All tests pass!
